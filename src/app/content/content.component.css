@@ -1,0 +1,16 @@
+.card{
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border: 1px solid black;
+    background-color:#007bff;
+}
+.form-signin{
+    padding: 30px;
+}
+p{
+    font-size: 40px;
+}
+/* button{
+    float: right !important;
+} */

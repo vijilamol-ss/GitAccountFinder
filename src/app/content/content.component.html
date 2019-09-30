@@ -1,0 +1,44 @@
+<div class="card ">
+        <div class="align-self-center">
+        <img  src="/assets/Images/logo.svg" alt="" width="72" height="72">
+        </div>
+<form class="form-signin">
+    <!-- <img class="text-center" src="/assets/Images/logo.svg" alt="" width="72" height="72"> -->
+    <p class="h3 mb-3 font-weight-normal text-center">Find Here!..</p>
+    <div class="mb-3">
+        <label for="username">Username</label>
+        <div class="input-group form-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <input type="text" class="form-control" 
+          [(ngModel)]="username" 
+          [ngModelOptions]="{standalone: true}"
+          id="username" placeholder="Username" required>
+        </div>
+    
+        <div class="form-group">
+        <button class="btn btn-warning text-center" 
+        (click)="getItemFromLocal()"
+        type="submit">
+        Find Me</button>
+        </div>  
+    </div>
+
+    <div *ngIf="Details">
+
+        <h4>{{Details.name}}</h4>
+
+        <img class="card-img-top"
+        [src]="Details.avatar_url"
+        alt="...">
+          
+        <div class="mb-3 form-group">
+            <label for="email">Url</label>
+            <input 
+            [value]="Details.html_url"
+            type="text" class="form-control" >
+        </div>
+    </div>
+</form>
+</div>
